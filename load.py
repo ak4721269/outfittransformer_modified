@@ -1,7 +1,7 @@
-from src.datasets.processor import FashionInputProcessor, FashionImageProcessor
+from processor import FashionInputProcessor, FashionImageProcessor
 from transformers import CLIPImageProcessor, CLIPTokenizer, AutoTokenizer
-from src.models.embedder import CLIPEmbeddingModel, OutfitTransformerEmbeddingModel
-from src.models.recommender import RecommendationModel
+from embedder import CLIPEmbeddingModel, OutfitTransformerEmbeddingModel
+from recommender import RecommendationModel
 import torch
 
 
