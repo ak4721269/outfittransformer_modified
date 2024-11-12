@@ -1,13 +1,13 @@
 import torch
 from torch.utils.data import DataLoader
 
-from src.datasets.polyvore_embed import DatasetArguments, PolyvoreDataset
+from polyvore_embed import DatasetArguments, PolyvoreDataset
 
-from src.models.embedder import CLIPEmbeddingModel
-from src.models.recommender import RecommendationModel
-from src.models.load import load_model
-from src.loss.focal_loss import focal_loss
-from src.utils.utils import save_model
+from embedder import CLIPEmbeddingModel
+from recommender import RecommendationModel
+from load import load_model
+from focal_loss import focal_loss
+from utils import save_model
 
 import os
 import wandb
