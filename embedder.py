@@ -8,9 +8,9 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torchvision.models import resnet18, ResNet18_Weights
 from transformers import AutoModel, CLIPTextModelWithProjection, CLIPVisionModelWithProjection
-from src.utils.utils import *
+from utils import *
 from typing import Literal
-from src.datasets.processor import FashionInputProcessor
+from processor import FashionInputProcessor
 
 
 def agg_embeds(image_embeds=None, text_embeds=None, agg_func='concat'):
