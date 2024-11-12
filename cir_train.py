@@ -1,13 +1,13 @@
 import torch
 from torch.utils.data import DataLoader
 
-from src.datasets.polyvore import DatasetArguments, PolyvoreDataset
+from polyvore import DatasetArguments, PolyvoreDataset
 
-from src.models.embedder import CLIPEmbeddingModel
-from src.models.recommender import RecommendationModel
-from src.models.load import load_model
-from src.loss.info_nce import InfoNCE
-from src.utils.utils import save_model
+from embedder import CLIPEmbeddingModel
+from recommender import RecommendationModel
+from load import load_model
+from info_nce import InfoNCE
+from utils import save_model
 
 import os
 import wandb
@@ -24,9 +24,9 @@ from sklearn.metrics import roc_auc_score
 from model_args import Args
 args = Args()
 
-args.data_dir = '/home/datasets/polyvore_outfits'
-args.checkpoint_dir = './checkpoints'
-args.model_path = './checkpoints/outfit_transformer/cir/240610/ACC0.647.pth'
+args.data_dir = '/kaggle/input/polyvore_outfits/'
+args.checkpoint_dir = './kaggle/input'
+args.model_path = '/kaggle/input/ak4721269_outfittransformer/transformers/default/1/final.pth'
     
 # Training Setting
 args.n_epochs = 3
