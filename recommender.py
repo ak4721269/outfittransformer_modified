@@ -19,10 +19,10 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.utils.data import DataLoader
 
-from src.utils.utils import *
-from src.models.embedder import *
-from src.loss.focal_loss import focal_loss
-from src.loss.triplet_loss import triplet_loss
+from utils import *
+from embedder import *
+from focal_loss import focal_loss
+from triplet_loss import triplet_loss
 
 
 class RecommendationModel(nn.Module):
