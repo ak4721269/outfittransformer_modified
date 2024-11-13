@@ -21,8 +21,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.utils.data import Dataset, DataLoader
 
-from src.utils.utils import *
-from src.datasets.processor import *
+from utils import *
+from processor import *
 import pickle
 
 from PIL import Image
@@ -30,7 +30,7 @@ from PIL import Image
 
 @dataclass
 class DatasetArguments:
-    polyvore_split: str = 'nondisjoint'
+    polyvore_split: str = 'disjoint'
     task_type: str = 'cp'
     dataset_type: str = 'train'
 
